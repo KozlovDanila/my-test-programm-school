@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handing Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Result</h1>
+<p th:text="'Ваш email: ' + ${emailInfo.email}"/>
+<p th:text="'Тема: ' + ${emailInfo.title}"/>
+<p th:text="'Сообщение: ' + ${emailInfo.message}"/>
+<a href="/send_email">Отправить новое сообщение</a>
+</body>
+</html>
