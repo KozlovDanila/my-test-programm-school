@@ -2,6 +2,7 @@ package com.email.email
 
 import com.email.email.models.Organisation
 import com.email.email.models.User
+import org.springframework.beans.factory.annotation.Required
 import org.springframework.web.bind.annotation.*
 
 @RestController

@@ -17,12 +17,16 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-mail")
-    implementation("org.springframework.boot:spring-boot-starter-parent:2.1.1.RELEASE")
+    implementation("org.springframework.boot:spring-boot-starter-parent:2.4.0")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf:2.4.1")
+
+    implementation("io.springfox:springfox-swagger2:3.0.0")
+    implementation("io.springfox:springfox-boot-starter:3.0.0")
+    implementation("io.springfox:springfox-swagger-ui:2.9.2")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
