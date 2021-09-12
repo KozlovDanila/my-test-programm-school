@@ -11,4 +11,11 @@ class User {
         this.name = name
         this.age = age
     }
+
+    constructor(userNew: User, userOld: User) {
+        this.id = userNew.id?.let { userNew.id } ?: userOld.id
+        this.name = userNew.name?.let { userNew.name } ?: userOld.name
+        this.age = userNew.age?.let { userNew.age } ?: userOld.age
+    }
+
 }

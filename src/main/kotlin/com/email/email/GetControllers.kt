@@ -5,6 +5,13 @@ import com.email.email.models.User
 import org.springframework.beans.factory.annotation.Required
 import org.springframework.web.bind.annotation.*
 
+val USERS = listOf(
+        User(1, "Oleg", 28),
+        User(2, "Olga", 25),
+        User(3, "Kirill", 15),
+        User(4, "Vika", 40),
+)
+
 @RestController
 @RequestMapping("/get")
 class GetControllers {
@@ -12,12 +19,7 @@ class GetControllers {
     @CrossOrigin
     @GetMapping("/users")
     fun getUsers(): List<User> {
-        return listOf(
-                User(1, "Oleg", 28),
-                User(2, "Olga", 25),
-                User(3, "Kirill", 15),
-                User(4, "Vika", 40),
-        )
+        return USERS
     }
 
     @CrossOrigin
