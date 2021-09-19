@@ -1,8 +1,8 @@
 package com.email.email
 
+import com.email.email.models.Country
 import com.email.email.models.Organisation
 import com.email.email.models.User
-import org.springframework.beans.factory.annotation.Required
 import org.springframework.web.bind.annotation.*
 
 val USERS = listOf(
@@ -39,5 +39,15 @@ class GetControllers {
                 Organisation(3, "Олморт", 0),
         )
         return id?.let { listOf.filter { it.id == id } } ?: listOf
+    }
+
+    @CrossOrigin
+    @GetMapping("/countries")
+    fun getCountries(): List<Country> {
+        return listOf(
+                Country(1, "Россия"),
+                Country(2, "Украина"),
+                Country(3, "Белорусь")
+        )
     }
 }
