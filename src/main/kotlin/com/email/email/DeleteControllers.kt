@@ -12,4 +12,10 @@ class DeleteControllers {
     fun changeUser(@RequestParam id: Long): List<User> {
         return USERS.filter { it.id != id }
     }
+
+    @CrossOrigin
+    @DeleteMapping("/book")
+    fun deleteBook(@RequestParam id: Long): String{
+        return "Вы удалили книгу под идентификатором $id"
+    }
 }

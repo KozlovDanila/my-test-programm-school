@@ -1,5 +1,6 @@
 package com.email.email
 
+import com.email.email.models.Book
 import com.email.email.models.User
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
@@ -25,5 +26,11 @@ class PostControllers {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     fun createResume() {
         println("adsf")
+    }
+
+    @CrossOrigin
+    @PostMapping("/book")
+    fun createBook(@RequestBody book: Book) : String{
+        return "Вы создали книгу ${book.id} ${book.name} ${book.author}"
     }
 }
